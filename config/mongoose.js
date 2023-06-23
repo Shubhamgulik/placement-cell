@@ -2,7 +2,11 @@
 const mongoose = require("mongoose");
 
 // Connection of NodeJS to localhost
-mongoose.connect("mongodb://127.0.0.1:27017/placementcell");
+mongoose.connect(
+  "mongodb+srv://shubhamgulik:shubhamgulik@cluster0.tuk6rdg.mongodb.net/placement-cell"
+);
+
+//mongodb://127.0.0.1:27017/placementcell
 
 //Aquiring connection
 const db = mongoose.connection;
