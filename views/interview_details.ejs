@@ -1,0 +1,55 @@
+<div class="details__container">
+  <h1><%= interview.company%> Interview Scheduled on <%= interview.date%></h1>
+  <form
+    class="update__form"
+    action="/interview/enroll-student/%>"
+    method="post"
+  >
+    <input
+      type="text"
+      name="company__id"
+      id="company__id"
+      value="<%= interview.id%>"
+      hidden
+    />
+    <input
+      type="text"
+      name="email"
+      id="email"
+      placeholder="Enter email of Student"
+    />
+    <select id="placement-status" required name="result">
+      <option value="Didn't attempt" selected>Didn't attempt</option>
+      <option value="Pass">Pass</option>
+      <option value="On Hold">On Hold</option>
+      <option value="Fail">Fail</option>
+    </select>
+    <div class="update__button">
+      <button type="submit">Enroll Student</button>
+    </div>
+  </form>
+  <div>
+    <h1>Students Enrolled</h1>
+    <table class="details__table">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Result</th>
+        <th>Action</th>
+      </tr>
+      <% for(let student of interview.students){%>
+      <tr>
+        <td><%=student.student.name%></td>
+        <td><%=student.student.email%></td>
+        <td><%=student.result%></td>
+        <td>
+          <a
+            href="/interview/<%=interview.id%>/students/<%=student.student.id%>"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      <%}%>
+    </table>
+  </div>
+</div>

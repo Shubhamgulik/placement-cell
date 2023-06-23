@@ -1,0 +1,84 @@
+<div class="input__formContainer">
+  <h1>Add Student</h1>
+  <form class="input__form" action="/student/add-student/" method="post">
+    <!-- <label for="name">Student Name:</label> -->
+    <div>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Enter Student Name"
+      />
+    </div>
+
+    <div>
+      <!-- <label for="email">Student Email:</label> -->
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Add Student Email"
+      />
+    </div>
+    <div>
+      <!-- <label for="college">College Name:</label> -->
+      <input
+        type="text"
+        name="college"
+        id="college"
+        placeholder="College Name"
+      />
+    </div>
+
+    <div>
+      <!-- <label for="batch">Batch:</label> -->
+      <input
+        type="text"
+        name="batch"
+        id="batch"
+        placeholder="Batch e.g. Jan'21/Jun'22"
+      />
+    </div>
+
+    <div>
+      <!-- <label for="dsa-score">DSA Score:</label> -->
+      <input
+        type="number"
+        name="dsaScore"
+        id="dsa-score"
+        placeholder="DSA Score"
+      />
+    </div>
+    <div>
+      <!-- <label for="backend-score">Web Dev Score:</label> -->
+      <input
+        type="number"
+        name="webdScore"
+        id="backend-score"
+        placeholder="Backend Score"
+      />
+    </div>
+    <div>
+      <!-- <label for="frontend-score">React Score:</label> -->
+      <input
+        type="number"
+        name="reactScore"
+        id="frontend-score"
+        placeholder="Frontend Score"
+      />
+    </div>
+    <div class="status__selector">
+      <label for="placement-status">Placement Status:</label>
+      <select
+        id="placement-status"
+        required
+        name="placed"
+        aria-placeholder="Placemtnt Status"
+      >
+        <option selected>Not placed</option>
+        <option>Placed</option>
+      </select>
+    </div>
+    <button type="submit">Add a Student</button>
+  </form>
+</div>

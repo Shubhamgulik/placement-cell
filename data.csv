@@ -1,0 +1,5 @@
+﻿student_ID,student_Name,student_College,student_Email,student_Batch,student_Placement_Status,student_DSA_Score,student_Webd_Score,student_React_Score,interview_Date,interview_Company,interview_Result
+"64781d7c0222de006836dc1e","Shubham Gulik","DMCE, Mumbai","shubhamgulik80@gmail.com","June'22","Not placed",19,87,66,"2023-06-02","Capgemini","Didn't attempt"
+"64781d920222de006836dc26","Akash Abcd","COE","akash@gmail.com","Jan","Not placed",65,78,55,"2023-06-30","Google","Didn't attempt"
+"648fe723313fe4cd08a3a7bf","abc","DMCE, Mumbai","abc@gmail.com","Dec'22","Not placed",22,11,22,"NA","NA","NA"
+"649570f2a8c04aaf1fb32a98","prashant","asdf","p@gmail.com","May","Not placed",11,11,11,"2023-06-22","Google","On Hold"

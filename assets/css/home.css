@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-size: 20px;
+}
+.dashboard__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+
+.list__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* overflow-y: scroll; */
+  height: 100vh;
+}
+
+.list__container ul {
+  padding-left: 5px;
+}
+
+.single__card {
+  list-style: none;
+  margin-bottom: 10px;
+  margin: 5px;
+}
+.single__card > a {
+  text-decoration: none;
+  color: black;
+}
+
+.mail {
+  font-weight: 100;
+  font-size: large;
+}
+
+.date {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
+
+.card__details {
+  width: 40vw;
+  height: 75px;
+  border: 2px solid rgb(191, 168, 168);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.card__details h3 {
+  margin: 0;
+}
+.card__details:hover {
+  transform: scale(1.01);
+  background-color: blanchedalmond;
+  cursor: pointer;
+}
+
+.stats {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.marks {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

@@ -1,0 +1,40 @@
+.update__form #placement-status {
+  width: 40vw;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: coral;
+}
+
+.details__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 8rem;
+}
+
+.student__details {
+  margin-left: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.update__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.details__table {
+  width: 60vw;
+  text-align: center;
+}
+
+.details__table th,
+td {
+  height: 5rem;
+  border: 1px solid black;
+}

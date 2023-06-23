@@ -1,0 +1,13 @@
+.user_formsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user_forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_buttons {
+  align-self: center;
+}

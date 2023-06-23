@@ -1,0 +1,33 @@
+<header class="header">
+  <a href="/"> Placement Cell </a>
+  <ul class="nav__links">
+    <% if (locals.user){ %>
+    <li>
+      <!-- <h1><%= user.name %></h1> -->
+      <a href="#"> <%= user.name %> </a>
+    </li>
+    <li>
+      <a href="/student/add-student">Add Student</a>
+    </li>
+    <li>
+      <a href="/interview/add-interview">Add Interview</a>
+    </li>
+    <li>
+      <a href="/download">Export to Excel</a>
+    </li>
+    <li>
+      <a href="/users/sign-out">Sign Out</a>
+    </li>
+    <% }else{ %>
+
+    <li>
+      <a href="/">Sign In</a>
+    </li>
+
+    <li>
+      <a href="/users/signup">Sign Up</a>
+    </li>
+
+    <% } %>
+  </ul>
+</header>

@@ -1,0 +1,50 @@
+<div class="dashboard__container">
+  <div class="list__container">
+    <h1>List of Students</h1>
+    <div>
+      <ul>
+        <% for(let student of students){ %>
+        <li class="single__card">
+          <a href="/student/<%= student.id %>"">
+            <div class="card__details">
+              <h3>
+                <%= student.name %> (<span class="mail"
+                  ><%= student.email %></span
+                >)
+              </h3>
+              <!-- <span><%= student.email %></span> -->
+              <div class="stats">
+                <div class="marks">
+                  <span>DSA : <%= student.dsaScore %></span>
+                  <span>Web Dev : <%= student.webdScore %></span>
+                  <span>React : <%= student.reactScore %></span>
+                </div>
+                <!-- <span> <%= student.placed %></span> -->
+              </div>
+            </div>
+          </a>
+        </li>
+        <%}%>
+      </ul>
+    </div>
+  </div>
+
+  <div class="list__container">
+    <h1>List of Companies</h1>
+    <div>
+      <ul>
+        <% for(let interview of interviews){ %>
+        <li class="single__card">
+          <a href="/interview/<%= interview.id%>" >
+
+            <div class="card__details">
+              <h3>Company Name: <%= interview.company %></h3>
+              <h4 class="date">Scheduled Date: <%= interview.date%></h4>
+            </div>
+          </a>
+        </li>
+        <%}%>
+      </ul>
+    </div>
+  </div>
+</div>

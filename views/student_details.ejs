@@ -1,0 +1,67 @@
+<div class="details__container">
+  <h1>Student Details</h1>
+  <div class="student__details">
+    <form class="update__form" action="/student/<%=student.id%>" method="post">
+      <input type="text" name="name" id="name" value="<%=student.name%>" />
+      <input type="text" name="email" id="email" value="<%=student.email%>" />
+      <input type="text" name="batch" id="batch" value="<%=student.batch%>" />
+      <input
+        type="text"
+        name="college"
+        id="college"
+        value="<%=student.college%>"
+      />
+      <input
+        type="number"
+        name="dsaScore"
+        id="dsa-score"
+        value="<%= student.dsaScore%>"
+      />
+      <input
+        type="number"
+        name="webdScore"
+        id="webd-score"
+        value="<%= student.webdScore%>"
+      />
+      <input
+        type="number"
+        name="reactScore"
+        id="react-score"
+        value="<%= student.reactScore%>"
+      />
+      <!-- <div class="status__selector"> -->
+      <!-- <label for="placement-status">Placement Status:</label> -->
+      <select
+        id="placement-status"
+        required
+        name="placed"
+        aria-placeholder="Placemtnt Status"
+      >
+        <option selected>Not placed</option>
+        <option>Placed</option>
+      </select>
+      <div class="update__button">
+        <button type="submit">Update Student</button>
+      </div>
+
+      <!-- </div> -->
+    </form>
+  </div>
+  <div class="interviews__scheduledContainer">
+    <h1>Scheduled Interviews</h1>
+    <table class="details__table">
+      <tr>
+        <th>Company</th>
+        <th>Date</th>
+        <th>Result</th>
+      </tr>
+      <% for(let interview of student.interviews){ %>
+      <tr>
+        <td><%=interview.company.company%></td>
+        <td><%=interview.company.date%></td>
+        <td><%= interview.result%></td>
+      </tr>
+      <%}%>
+    </table>
+  </div>
+</div>
