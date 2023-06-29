@@ -2,6 +2,7 @@ const Student = require("../models/student");
 const ExportToCsv = require("export-to-csv").ExportToCsv;
 const fs = require("fs");
 
+// Download CSV
 module.exports.downloadCsv = async function (req, res) {
   try {
     const students = await Student.find({}).populate("interviews.company");

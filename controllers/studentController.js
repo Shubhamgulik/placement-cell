@@ -1,12 +1,14 @@
 const { default: mongoose } = require("mongoose");
 const Student = require("../models/student");
 
+// Add student
 module.exports.addStudent = function (req, res) {
   return res.render("student", {
     title: "Add a student",
   });
 };
 
+// Create Student
 module.exports.createStudent = async function (req, res) {
   console.log("Student body : ", req.body);
 
@@ -25,6 +27,7 @@ module.exports.createStudent = async function (req, res) {
   }
 };
 
+// Get student details
 module.exports.getStudentDetails = async function (req, res) {
   console.log("Student ID: ", req.params.id);
   try {

@@ -1,12 +1,15 @@
 const { default: mongoose } = require("mongoose");
 const Interview = require("../models/interview");
 const Student = require("../models/student");
+
+// Render Interview Page
 module.exports.addInterview = function (req, res) {
   return res.render("interview", {
     title: "Add a company",
   });
 };
 
+// Create Interview
 module.exports.createInterview = async function (req, res) {
   try {
     await Interview.create(req.body);
@@ -17,6 +20,7 @@ module.exports.createInterview = async function (req, res) {
   }
 };
 
+// Get Interview Details
 module.exports.getInterviewDetails = async function (req, res) {
   try {
     const interview = await Interview.findById(req.params.id).populate(
@@ -36,6 +40,7 @@ module.exports.getInterviewDetails = async function (req, res) {
   }
 };
 
+// Enroll Student
 module.exports.enrollStudent = async function (req, res) {
   console.log("Enrolled students: ", req.body);
   try {
@@ -87,6 +92,7 @@ module.exports.enrollStudent = async function (req, res) {
   }
 };
 
+// Delete Student
 module.exports.deleteStudent = function (req, res) {
   const interviewId = req.params.interviewId;
   const studentId = req.params.studentId;
